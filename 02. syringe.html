@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>syringe</title>
+    <style>
+        .syringe {
+            width: 800px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 0px 10px 10px 0px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(white 0%, rgb(164, 163, 163) 50%, white 100%);
+        }
+
+        .syringe::before {
+            content: "";
+            width: 50px;
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: -50px;
+            transform: translateY(-25%);
+            background: linear-gradient(white 0%, rgb(164, 163, 163) 50%, white 100%);
+        }
+
+        .syringe::after {
+            content: "";
+            width: 600px;
+            height: 200px;
+            border: 1px solid black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(white 0%, rgba(164, 163, 163) 50%, white 100%);
+        }
+
+        .block {
+            width: 600px;
+            height: 200px;
+            /* border: 1px solid rgb(0, 0, 0); */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(to right,
+                    rgba(255, 255, 255, 0.3) 0%,
+                    rgba(255, 255, 255, 0.3) 45%,
+                    black 45%,
+                    black 55%,
+                    rgba(255, 255, 0, 0.3) 55%,
+                    rgba(255, 255, 0, 0.3) 100%);
+            z-index: 1;
+            background-repeat: repeat-x;
+        }
+
+        .block::before {
+            content: '';
+            width: 600px;
+            height: 30px;
+            position: absolute;
+            background-size: 30px 30px;
+            background-image: linear-gradient(to right,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0) 95%,
+                    black 95%,
+                    black 100%);
+        }
+
+        .block::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 700px;
+            width: 100px;
+            height: 0px;
+            border: 0.1px solid rgba(0, 0, 0, 1);
+        }
+
+        .text {
+            color: gray;
+            font-size: 1.5rem;
+            font-family: "微軟正黑體";
+            line-height: 360px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="syringe">
+        <div class="block">
+            <div class="text">Made in Taiwan</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
